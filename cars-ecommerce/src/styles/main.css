@@ -63,6 +63,24 @@ body {
   color: #eee;
 }
 
+/* Improve visibility for muted text on dark backgrounds */
+.text-muted, .small.text-muted, p.text-muted {
+  color: rgba(255,255,255,0.72) !important;
+}
+
+/* Cards and sidebar text contrast */
+.card, .sidebar-featured, footer {
+  color: rgba(255,255,255,0.92);
+}
+
+/* Links and nav items stronger */
+.nav-link, .navbar-brand, .btn, a {
+  color: rgba(255,255,255,0.93) !important;
+}
+
+/* Slightly increase subtitle contrast and size */
+.lead, .card-text { color: rgba(255,255,255,0.78); }
+
 footer {
   background: linear-gradient(90deg, #0f0f0f 0%, #2b0b0b 100%);
 }
