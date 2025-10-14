@@ -24,11 +24,11 @@ const featured = [
 
 export default function FeaturedCars({ compact = false }) {
   return (
-    <section className={"py-2" + (compact ? "" : " container py-5") }>
+    <section className={"py-2" + (compact ? "" : " container py-5") } aria-label={compact ? "Featured cars sidebar" : "Featured cars"}>
       {!compact && <h2 className="text-center mb-4">Featured Cars</h2>}
-      <div className={compact ? "d-flex flex-column gap-3" : "row"}>
-        {featured.map(c => (
-          <div className={compact ? "mb-3" : "col-md-4 mb-4"} key={c.id}>
+      <div className={(compact ? "d-flex flex-column gap-3" : "row") + " staggered"}>
+        {featured.map((c, i) => (
+          <div className={compact ? "mb-3 fade-in" : "col-md-4 mb-4 fade-in"} key={c.id} style={{animationDelay: `${i*80}ms`}}>
             <CarCard {...c} small={compact} />
           </div>
         ))}

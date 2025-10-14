@@ -20,8 +20,8 @@
 /* Home page two-column layout */
 .home-layout {
   display: grid;
-  grid-template-columns: 1fr 360px;
-  gap: 2rem;
+  grid-template-columns: 1fr 420px; /* increased sidebar width to match mock */
+  gap: 3rem; /* wider gap */
   align-items: start;
 }
 
@@ -33,16 +33,24 @@
 @media (min-width: 992px) {
   .right-sidebar .sticky-card {
     position: sticky;
-    top: 120px;
+    top: 100px; /* slightly smaller top offset */
   }
 }
 
 /* featured cards styling in sidebar */
 .sidebar-featured .card {
-  background: linear-gradient(180deg, #111 0%, #1b1b1b 100%);
+  background: linear-gradient(180deg, #0f0f0f 0%, #171717 100%);
   color: #fff;
   border-radius: 10px;
+  padding: 0.35rem;
 }
+
+.sidebar-featured h6 {
+  font-size: 1.05rem;
+  letter-spacing: 0.4px;
+}
+
+.sidebar-featured .mb-3 { margin-bottom: 1.25rem !important; }
 
 @media (max-width: 991px) {
   .home-layout { grid-template-columns: 1fr; }
@@ -58,3 +66,34 @@ body {
 footer {
   background: linear-gradient(90deg, #0f0f0f 0%, #2b0b0b 100%);
 }
+
+/* Animations */
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in { animation: fadeIn 600ms ease both; }
+  .slide-up { animation: slideUp 560ms cubic-bezier(.2,.8,.2,1) both; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(10px); opacity: 0 }
+  to { transform: translateY(0); opacity: 1 }
+}
+
+/* stagger helper */
+.staggered > * { opacity: 0; transform: translateY(6px); }
+.staggered > *.fade-in { opacity: 1; transform: none; }
+
+/* Pill buttons matching mock */
+.btn-pill { border-radius: 999px; padding-left: 1.2rem; padding-right: 1.2rem; }
+.btn-danger-pill { background: linear-gradient(90deg,#bf1b1b,#7a0b0b); border: none; color: #fff; box-shadow: 0 8px 22px rgba(191,27,27,0.22); }
+.btn-outline-light-pill { background: transparent; border: 1px solid rgba(255,255,255,0.12); color: #fff; }
+
+/* Small adjustments for compact cards */
+.sidebar-featured .card { border: 1px solid rgba(255,255,255,0.04); }
+
+/* Accessibility focus styles */
+a:focus, button:focus { outline: 3px solid rgba(255,255,255,0.06); outline-offset: 3px; }

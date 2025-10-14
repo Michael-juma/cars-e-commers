@@ -27,19 +27,19 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navMenu">
           <ul className="navbar-nav ms-auto align-items-lg-center">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/">Home</NavLink>
+              <NavLink className="nav-link" to="/" aria-label="Go to home">Home</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/shop">Shop</NavLink>
+              <NavLink className="nav-link" to="/shop" aria-label="Browse shop">Shop</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/about">About</NavLink>
+              <NavLink className="nav-link" to="/about" aria-label="About us">About</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/contact">Contact</NavLink>
+              <NavLink className="nav-link" to="/contact" aria-label="Contact us">Contact</NavLink>
             </li>
             <li className="nav-item ms-2">
-              <NavLink className="nav-link d-flex align-items-center" to="/admin">
+              <NavLink className="nav-link d-flex align-items-center" to="/admin" aria-label="Admin dashboard">
                 <FaUserCircle className="me-1" /> Admin
               </NavLink>
             </li>
