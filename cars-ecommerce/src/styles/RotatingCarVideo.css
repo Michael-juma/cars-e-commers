@@ -1,0 +1,32 @@
+.rotating-car-video-bg {
+  background: linear-gradient(120deg, #181818 60%, #1a0d0d 100%);
+  border-radius: 1.2rem;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  max-height: 420px;
+  margin-bottom: 2.2rem;
+  overflow: hidden;
+}
+
+.rotating-car-video {
+  width: 90%;
+  max-width: 480px;
+  max-height: 340px;
+  object-fit: contain;
+  background: #111;
+  border-radius: 1.2rem;
+  transition: box-shadow 0.3s;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.22);
+}
+
+.fade-in {
+  animation: fadeIn 0.7s cubic-bezier(.2,.8,.2,1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

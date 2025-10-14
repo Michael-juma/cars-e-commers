@@ -2,7 +2,7 @@
 
 .hero {
   height: 90vh;
-  background: linear-gradient(rgba(10,10,10,0.55), rgba(10,10,10,0.55)),
+  background: linear-gradient(rgba(17, 17, 17, 0.55), rgba(10,10,10,0.55)),
     url("https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1600&auto=format&fit=crop") center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -39,7 +39,7 @@
 
 /* featured cards styling in sidebar */
 .sidebar-featured .card {
-  background: linear-gradient(180deg, #0f0f0f 0%, #171717 100%);
+  background: linear-gradient(180deg, #060606 0%, #4e0c0c 100%);
   color: #fff;
   border-radius: 10px;
   padding: 0.35rem;
@@ -59,7 +59,7 @@
 
 /* page background and tone */
 body {
-  background: radial-gradient(circle at top left, rgba(60,10,10,0.12), transparent 200px), #070707;
+  background: radial-gradient(circle at top left, rgba(41, 30, 30, 0.12), transparent 200px), #411e1e;
   color: #eee;
 }
 
