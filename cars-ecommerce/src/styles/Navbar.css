@@ -1,0 +1,21 @@
+.navbar {
+  transition: all 0.3s ease;
+}
+.navbar-brand {
+  font-size: 1.3rem;
+}
+
+.navbar {
+  background: rgba(15,15,15,0.85) !important;
+  padding: 0.8rem 1rem;
+}
+
+.navbar .nav-link {
+  color: rgba(255,255,255,0.9) !important;
+}
+
+.navbar .nav-link.active {
+  background: rgba(255,0,0,0.12);
+  border-radius: 20px;
+  padding: 0.4rem 0.9rem;
+}

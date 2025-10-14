@@ -1,292 +1,60 @@
-:root {
-  --primary-red: #e50914;
-  --dark-bg: #0a0a0a;
-  --card-bg: #1a1a1a;
-  --text-light: #ffffff;
-  --text-gray: #b3b3b3;
-}
+/* main.css */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--dark-bg);
-  color: var(--text-light);
-  overflow-x: hidden;
-}
-
-.app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Custom Bootstrap overrides */
-.btn-primary {
-  background-color: var(--primary-red);
-  border-color: var(--primary-red);
-  font-weight: 600;
-  padding: 0.75rem 2rem;
-  transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #b8070f;
-  border-color: #b8070f;
-  transform: translateY(-2px);
-}
-
-.btn-outline-light:hover {
-  background-color: var(--text-light);
-  color: var(--dark-bg);
-}
-
-.card {
-  background-color: var(--card-bg);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(229, 9, 20, 0.3);
-}
-
-.text-primary-red {
-  color: var(--primary-red) !important;
-}
-
-.bg-dark-custom {
-  background-color: var(--dark-bg);
-}
-
-.bg-card {
-  background-color: var(--card-bg);
-}
-
-/* Navbar styles */
-.navbar {
-  background-color: rgba(10, 10, 10, 0.95) !important;
-  backdrop-filter: blur(10px);
-  padding: 1rem 0;
-}
-
-.navbar-brand img {
-  height: 50px;
-}
-
-.nav-link {
-  color: var(--text-light) !important;
-  font-weight: 500;
-  margin: 0 1rem;
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  color: var(--primary-red) !important;
-}
-
-/* Hero section */
-.hero-section {
-  min-height: 90vh;
-  background: linear-gradient(135deg, rgba(10, 10, 10, 0.9), rgba(26, 26, 26, 0.9)),
-    url("/sleek-black-mclaren-supercar-on-dark-road-with-dra.jpg") center / cover;
+.hero {
+  height: 90vh;
+  background: linear-gradient(rgba(10,10,10,0.55), rgba(10,10,10,0.55)),
+    url("https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1600&auto=format&fit=crop") center/cover no-repeat;
   display: flex;
   align-items: center;
+}
+
+.hero .lead {
+  color: rgba(255,255,255,0.9);
+}
+
+@media (max-width: 576px) {
+  .hero { height: 70vh; padding: 3rem 1rem; }
+  .hero h1 { font-size: 1.6rem; }
+}
+
+/* Home page two-column layout */
+.home-layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.right-sidebar {
   position: relative;
 }
 
-.hero-content h1 {
-  font-size: 4rem;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
-}
-
-.hero-content .text-primary-red {
-  display: block;
-}
-
-/* Services section */
-.services-section {
-  padding: 5rem 0;
-  background-color: var(--dark-bg);
-}
-
-.service-card {
-  background-color: var(--card-bg);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 2rem;
-  border-radius: 10px;
-  height: 100%;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.service-card:hover {
-  border-color: var(--primary-red);
-  transform: translateX(10px);
-}
-
-.service-card i {
-  font-size: 2rem;
-  color: var(--primary-red);
-  margin-bottom: 1rem;
-}
-
-/* Stats section */
-.stats-section {
-  background-color: var(--card-bg);
-  padding: 3rem 0;
-}
-
-.stat-item h3 {
-  font-size: 3rem;
-  font-weight: 800;
-  color: var(--primary-red);
-}
-
-/* Innovation section */
-.innovation-section {
-  padding: 5rem 0;
-  background: linear-gradient(135deg, var(--dark-bg), var(--card-bg));
-}
-
-.innovation-section h2 {
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 1.2;
-}
-
-.feature-card {
-  background-color: rgba(26, 26, 26, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 2rem;
-  border-radius: 10px;
-  height: 100%;
-}
-
-.feature-card i {
-  font-size: 2.5rem;
-  color: var(--primary-red);
-  margin-bottom: 1rem;
-}
-
-/* Featured Cars section */
-.featured-cars-section {
-  padding: 5rem 0;
-  background-color: var(--dark-bg);
-}
-
-.car-card {
-  background-color: var(--card-bg);
-  border-radius: 10px;
-  overflow: hidden;
-  height: 100%;
-}
-
-.car-card img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-}
-
-.car-card-body {
-  padding: 1.5rem;
-}
-
-.car-card h5 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.car-card .badge {
-  background-color: rgba(229, 9, 20, 0.2);
-  color: var(--primary-red);
-  padding: 0.5rem 1rem;
-  font-weight: 600;
-}
-
-/* Testimonials section */
-.testimonials-section {
-  padding: 5rem 0;
-  background-color: var(--card-bg);
-}
-
-.testimonial-card {
-  background-color: rgba(10, 10, 10, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 2rem;
-  border-radius: 10px;
-  height: 100%;
-}
-
-.testimonial-card img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
-/* Footer */
-.footer {
-  background-color: var(--dark-bg);
-  padding: 3rem 0 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: auto;
-}
-
-.footer h5 {
-  color: var(--primary-red);
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-}
-
-.footer a {
-  color: var(--text-gray);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer a:hover {
-  color: var(--primary-red);
-}
-
-.social-icons a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: var(--card-bg);
-  border-radius: 50%;
-  margin-right: 0.5rem;
-  transition: all 0.3s ease;
-}
-
-.social-icons a:hover {
-  background-color: var(--primary-red);
-  transform: translateY(-3px);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2.5rem;
+/* make sidebar sticky on larger screens */
+@media (min-width: 992px) {
+  .right-sidebar .sticky-card {
+    position: sticky;
+    top: 120px;
   }
+}
 
-  .innovation-section h2 {
-    font-size: 2rem;
-  }
+/* featured cards styling in sidebar */
+.sidebar-featured .card {
+  background: linear-gradient(180deg, #111 0%, #1b1b1b 100%);
+  color: #fff;
+  border-radius: 10px;
+}
 
-  .stat-item h3 {
-    font-size: 2rem;
-  }
+@media (max-width: 991px) {
+  .home-layout { grid-template-columns: 1fr; }
+  .right-sidebar { order: 2; }
+}
+
+/* page background and tone */
+body {
+  background: radial-gradient(circle at top left, rgba(60,10,10,0.12), transparent 200px), #070707;
+  color: #eee;
+}
+
+footer {
+  background: linear-gradient(90deg, #0f0f0f 0%, #2b0b0b 100%);
 }
