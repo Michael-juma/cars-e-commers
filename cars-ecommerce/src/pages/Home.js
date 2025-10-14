@@ -36,24 +36,74 @@ export default function Home() {
                   </div>
                 </div>
                 {/* Add more services as car dealers does then add a nice button for join us and add map */}
-                <div className="col-md-4">
-                  <div className="p-4 col-md-8 bg-secondary text-light rounded">
-                    <h6>Trade-In</h6>
-                    <p className="small text-muted">Get a valuation for your current vehicle.</p>
-                  </div>
-                </div>
-                <div className="col-md-8">
-                  <div className="p-4 bg-dark text-light rounded">
-                    <h5>Financing</h5>
-                    <p className="small text-muted">Explore financing options tailored to you.</p>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="p-4 bg-secondary text-light rounded">
-                    <h6>Book a Test Drive</h6>
-              </div>
-                    <p className="small text-muted">Experience your dream car firsthand.</p>
-                    </div>
+                <div className="col-md-4 mt-4">
+          <div className="card shadow-sm border-0 h-100 text-center">
+            <div className="card-body bg-light rounded-3">
+              <i className="bi bi-cash-coin display-5 text-primary mb-3"></i>
+              <h5 className="fw-bold">Trade-In</h5>
+              <p className="text-muted small">
+                Get a fair valuation for your current car and drive home your dream one today.
+              </p>
+              <button className="btn btn-outline-primary btn-sm">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+        {/* Financing */}
+        <div className="col-md-4 mt-4">
+          <div className="card shadow-sm border-0 h-100 text-center">
+            <div className="card-body bg-dark text-light rounded-3">
+              <i className="bi bi-credit-card-2-front display-5 text-warning mb-3"></i>
+              <h5 className="fw-bold">Financing</h5>
+              <p className="text-muted small">
+                Explore flexible payment plans and financing options that fit your budget.
+              </p>
+              <button className="btn btn-warning btn-sm text-dark fw-semibold">
+                Apply Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Book a Test Drive */}
+        <div className="col-md-4 mt-3">
+          <div className="card shadow-sm border-0 h-100 text-center">
+            <div className="card-body bg-light rounded-3">
+              <i className="bi bi-steering-wheel display-5 text-danger mb-3"></i>
+              <h5 className="fw-bold">Book a Test Drive</h5>
+              <p className="text-muted small">
+                Experience your preferred model firsthand. Schedule a test drive today!
+              </p>
+              <button className="btn btn-danger btn-sm">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Join Us CTA */}
+      <div className="text-center mt-5">
+        <h4 className="fw-bold mb-3">Join Our Community</h4>
+        <p className="text-muted mb-4">
+          Register with us to get exclusive access to offers, updates, and premium deals.
+        </p>
+        <div className="d-flex justify-content-center gap-3 flex-wrap">
+          <button className="btn btn-primary btn-lg px-4">Register</button>
+          <button className="btn btn-outline-dark btn-lg px-4">Login</button>
+        </div>
+      </div>
+
+      {/* Map Section */}
+      <div className="mt-5">
+        <h5 className="text-center mb-3 fw-bold">Find Us</h5>
+        <div className="ratio ratio-16x9 rounded-4 shadow-sm">
+          <iframe
+            title="dealership-map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.859761492851!2d36.82194691531373!3d-1.2920659990589152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10e720d7c001%3A0x6a0ef2f661d19b63!2sNairobi%20CBD!5e0!3m2!1sen!2ske!4v1696883922461!5m2!1sen!2ske"
+            allowFullScreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      
                 </div>
             </section>
           </main>
