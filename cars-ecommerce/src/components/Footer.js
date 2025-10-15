@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container">
         <div className="row">
           <div className="col-md-4 mb-3">
-            <h5>CarsEcomm</h5>
+            <h5>Obudho's Motors</h5>
             <p className="text-muted">Premium car dealership platform in Kenya.</p>
           </div>
           <div className="col-md-4 mb-3">
@@ -19,11 +19,11 @@ export default function Footer() {
           </div>
           <div className="col-md-4 mb-3">
             <h6>Contact</h6>
-            <p className="text-muted mb-0">12 West Street, Nairobi</p>
-            <p className="text-muted">+254 712 345 678</p>
+            <p className="text-muted mb-0">South B, Nairobi</p>
+            <p className="text-muted">+254 725745754</p>
           </div>
         </div>
-        <div className="text-center text-muted small mt-3">&copy; {new Date().getFullYear()} CarsEcomm. All rights reserved.</div>
+        <div className="text-center text-muted small mt-3">&copy; {new Date().getFullYear()} Obudho's Motors. All rights reserved.</div>
       </div>
     </footer>
   );

@@ -48,12 +48,12 @@ export default function Home() {
                   <div className="card shadow-sm border-0 h-100 text-center">
                     <div className="card-body bg-light rounded-3">
                       <i className="bi bi-cash-coin display-5 text-primary mb-3"></i>
-                      <h5 className="fw-bold">Trade-In</h5>
-                      <p className="text-muted small">
+                      <h5 className="fw-bold text-dark">Trade-In</h5>
+                      <p className=" small text-dark">
                         Get a fair valuation for your current car and drive home
                         your dream one today.
                       </p>
-                      <button className="btn btn-outline-primary btn-sm">
+                      <button className="btn btn-primary btn-sm">
                         Learn More
                       </button>
                     </div>
@@ -82,8 +82,8 @@ export default function Home() {
                   <div className="card shadow-sm border-0 h-100 text-center">
                     <div className="card-body bg-light rounded-3">
                       <i className="bi bi-steering-wheel display-5 text-danger mb-3"></i>
-                      <h5 className="fw-bold">Book a Test Drive</h5>
-                      <p className="text-muted small">
+                      <h5 className="fw-bold text-dark">Book a Test Drive</h5>
+                      <p className="text-dark small">
                         Experience your preferred model firsthand. Schedule a
                         test drive today!
                       </p>

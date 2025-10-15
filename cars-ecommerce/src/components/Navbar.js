@@ -9,7 +9,7 @@ export default function Navbar() {
       <div className="container">
         <Link className="navbar-brand d-flex align-items-center" to="/">
           <FaCarSide className="me-2 text-warning" />
-          CarsEcomm
+          Obudho's Motors
         </Link>
 
         <button
